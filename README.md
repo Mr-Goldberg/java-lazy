@@ -5,6 +5,8 @@ Simple and robust implementation of Kotlin lazy in Java. Thread-safe. Suitable f
 # Example
 
 ```java
+import static com.goldberg.lazy.Lazy.lazy;
+
 class Example
 {
     final Supplier<Integer> lazyField;
@@ -31,7 +33,39 @@ class Example
 
 # Download
 
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 
+dependencies {
+    implementation 'com.github.Mr-Goldberg:java-lazy:1.0'
+}
+```
+
+#### Java 8 is required. To use it, put in gradle file:
+
+In Java project:
+
+```gradle
+sourceCompatibility = "8"
+targetCompatibility = "8"
+```
+
+In Android:
+
+```gradle
+android {
+    ...
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+```
 
 # License
 
